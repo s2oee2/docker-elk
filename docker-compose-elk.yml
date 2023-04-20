@@ -26,7 +26,7 @@ services:
       - elasticsearch
 
   elasticsearch:
-    image: s2oee2/elasticsearch
+    image: s2oee2/elasticsearch:8.7.0
     container_name: elasticsearch
     volumes:
       - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro,Z
@@ -47,7 +47,7 @@ services:
     restart: unless-stopped
 
   logstash:
-    image: s2oee2/logstash
+    image: s2oee2/logstash:8.7.0
     container_name: logstash
     volumes:
       - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro,Z
@@ -68,7 +68,7 @@ services:
     restart: unless-stopped
 
   kibana:
-    image: s2oee2/kibana
+    image: s2oee2/kibana:8.7.0
     container_name: kibana
     volumes:
       - ./kibana/config/kibana.yml:/usr/share/kibana/config/kibana.yml:ro,Z
